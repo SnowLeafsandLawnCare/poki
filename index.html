@@ -2,9 +2,20 @@
   <head>
     <link rel="icon" href="/download.png">
     <title>poki</title>
-    <meta HTTP-EQUIV="REFRESH" content="0; url=https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+    <meta HTTP-EQUIV="REFRESH" content="5; url=https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+    <script>
+       var timeleft = 5;
+
+       var downloadtime = setInterval(function(){
+        if (timeleft <= 0){
+          clearInterval(downloadtime)
+        } 
+        document.getElementById("counter").innerText ="You will be redirected in " + timeleft + " seconds."
+        timeleft -= 1
+       }, 1000);
+    </script>
   </head>
   <body>
-    <h1>RICKroll</h1>
+    <h1 class="counter">You will be redirected in 5 seconds.</h1>
   </body>
 </html>
